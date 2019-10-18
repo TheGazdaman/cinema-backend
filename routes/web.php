@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/api/tableTheatre', 'TableTheatre@tableTheatre');
 
+
+Route::get('/api/openstatus', 'HeaderTheater@data');
+
