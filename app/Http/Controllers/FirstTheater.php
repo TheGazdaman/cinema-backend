@@ -4,35 +4,23 @@ namespace App\Http\Controllers;
 
 use DB;
 use Illuminate\Http\Request;
+use App\Theater;
 
 class FirstTheater extends Controller
 {
     
 
     public function cinemaCity() {
-        $query ="
-            SELECT * 
-            FROM 'theaters'
-            
-            ORDER BY 'id' ?
-            
-        
-        
-        ";
-
+       
         $theater_id = 4;
 
-        $cinCity = DB::table('theatres')
-            ->where('id', '$theater_id')
-            ->first();
+        $cinCity = Theater::where("id", $theater_id)
+            ->get();
 
-        return($cinCity);
 
-        // $cinemaCity = DB::table('theaters')
-        //     ->orderBy('id', 4)
-        //     ->limit()
-        //     ->get();
-        // return $cinemaCity;         
+        return $cinCity;
+
+             
     }
 }
 
