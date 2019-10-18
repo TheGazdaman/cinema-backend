@@ -17,6 +17,17 @@ Route::get('/', function () {
 
 Route::get('/api/tableTheatre', 'TableTheatre@tableTheatre');
 
-
 Route::get('/api/openstatus', 'HeaderTheater@data');
+
+
+Route::get('/api/cinemaCity', 'FirstTheater@cinemaCity');
+
+
+// Route::get('/api/openstatus', 'HeaderTheater@data');
+// Route::get('/api/openstatus', 'HeaderTheater@data');
+// Route::get('/api/openstatus', 'HeaderTheater@data');
+
+
+
+
 
