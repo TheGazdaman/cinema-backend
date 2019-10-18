@@ -14,14 +14,14 @@ class TableTheatre extends Controller
             FROM 'theaters'
             
             ORDER BY 'name' ASC
-            LIMIT 10
+            LIMIT 17
         
         
         ";
 
         $tableTheatre = DB::table('theaters')
             ->orderBy('name', 'asc')
-            ->limit(10)
+            ->limit(17)
             ->get();
         return $tableTheatre;   
     }
